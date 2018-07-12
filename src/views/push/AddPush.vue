@@ -48,7 +48,7 @@ function createAd (_this) {
   if (_this.form.send_at === '') {
     delete _this.form.send_at
   }
-  api.account.post('api/v1/broadcasts', _this.form)
+  api.post('admin/broadcasts', _this.form)
   .then((result) => {
     _this.$message.success('success')
     _this.$router.push('/push')
